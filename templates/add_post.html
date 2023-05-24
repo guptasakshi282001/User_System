@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Post</title>
+</head>
+<body>
+    <h1>Add Post</h1>
+    <form method="POST" action="{{ url_for('add_post') }}" enctype="multipart/form-data">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title"><br><br>
+
+        <label for="photo">Photo:</label>
+        <input type="file" id="photo" name="photo"><br><br>
+
+        <label for="slug">Slug:</label>
+        <input type="text" id="slug" name="slug"><br><br>
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description"></textarea><br><br>
+
+        <input type="submit" value="Add Post">
+    </form>
+</body>
+</html>

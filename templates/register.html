@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration</title>
+    <link rel="stylesheet" href="static/register.css">
+</head>
+<body>
+    <div class="container">
+    <h1>Registration</h1>
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    <form method="post" enctype="multipart/form-data">
+        <div class="first_name">
+        <label for="first_name">First Name:</label></div>
+        <input type="text" id="first_name" name="first_name" required><br><br>
+        
+        <div class="last_name">
+        <label for="last_name">Last Name:</label></div>
+        <input type="text" id="last_name" name="last_name" required><br><br>
+        
+        <div class="mob">
+        <label for="mobile_number">Mobile Number:</label></div>
+        <input type="tel" id="mobile_number" name="mobile_number" ><br><br>
+        
+        <div class="profile">
+        <label for="profile_photo">Profile Photo:</label></div>
+        <input type="file" id="profile_photo" name="profile_photo" accept="image/jpeg, image/png" required><br><br>
+        
+        <div class="email">
+        <label for="email">Email:</label></div>
+        <input type="email" id="email" name="email" ><br><br>
+        
+        <div class="pass">
+        <label for="password">Password:</label></div>
+        <input type="password" id="password" name="password" required><br><br>
+        
+        <div class="confir">
+        <label for="confirm_password">Confirm Password:</label></div>
+        <input type="password" id="confirm_password" name="confirm_password" required><br><br>
+        
+        <input type="submit" value="Register">
+    </form>
+    </div>
+</body>
+</html>
