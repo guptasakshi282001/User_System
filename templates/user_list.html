@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User List</title>
+    <link rel="stylesheet" href="static/user_list.css">
+</head>
+<body>
+    <h1>User List</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Mobile_Number</th>
+            <th>Email</th>
+            <th>Action</th>
+        </tr>
+        {% for user in users %}
+        <tr>
+            <td>{{ user[0] }}</td>  <!-- Assuming the first column is the user ID -->
+            <td>{{ user[1] }}</td>  <!-- Assuming the second column is the user's first name -->
+            <td>{{ user[2] }}</td>  <!-- Assuming the third column is the user's last name -->
+            <td>{{ user[3] }}</td>  <!-- Assuming the fourth column is the user's email -->
+            <td>{{ user[4] }}</td>  <!-- Assuming the fifth column is the user's mobile number -->
+            <td><a href="{{ url_for('update_user', user_id=user[0]) }}">Update</a></td>  <!-- Assuming the user ID is passed as user[0] -->
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
